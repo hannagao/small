@@ -1,10 +1,12 @@
-package com.hng.small.model.dataobject;
+package com.hng.small.dal.query;
+
+import com.hng.small.common.core.BaseQuery;
 
 /**
  * @Author gaohanna
- * @Date 2017/3/10
+ * @Date 2017/3/21
  */
-public class User extends BaseDO{
+public class UserQuery extends BaseQuery {
 
     private String userName;
     private String password;
@@ -24,5 +26,4 @@ public class User extends BaseDO{
     public void setPassword(String password) {
         this.password = password;
     }
-
 }

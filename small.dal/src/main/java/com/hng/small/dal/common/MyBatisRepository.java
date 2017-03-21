@@ -1,4 +1,4 @@
-package com.hng.small.common;
+package com.hng.small.dal.common;
 
 import java.lang.annotation.*;
 

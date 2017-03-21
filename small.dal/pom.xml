@@ -29,6 +29,10 @@
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis-spring</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.hng</groupId>
+            <artifactId>small.common</artifactId>
+        </dependency>
     </dependencies>
 
 
