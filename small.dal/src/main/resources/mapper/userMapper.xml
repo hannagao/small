@@ -26,6 +26,13 @@
             </if>
         </trim>
     </sql>
+
+    <!--查询总数-->
+    <select id="count" parameterType="com.hng.small.dal.query.UserQuery" resultType="java.lang.Integer">
+        select count(id) from user_t
+        <include refid="queryParams"/>
+    </select>
+
     <!--根据ID获取对应的值  -->
     <select id="findById" parameterType="int" resultMap="resultMap">
         select
@@ -52,5 +59,14 @@
         <include refid="queryColumns"/>
         from user_t
         <include refid="queryParams"/>
+        <if test="sorts != null and sorts.size > 0">
+            order by
+            <foreach collection="sorts" item="sort" separator=",">
+                ${sort.columnName} ${sort.sortType}
+            </foreach>
+        </if>
+        <if test="page != null">
+            limit #{page.offset},#{page.size}
+        </if>
     </select>
 </mapper>

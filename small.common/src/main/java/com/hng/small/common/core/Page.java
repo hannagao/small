@@ -1,6 +1,5 @@
 package com.hng.small.common.core;
 
-import lombok.*;
 
 /**
  * @Author gaohanna
@@ -36,5 +35,9 @@ public class Page {
 
     public void setSize(Integer size) {
         this.size = size;
+    }
+
+    public Integer getOffset(){
+        return number <= 1 ? 0 : (number - 1) * size;
     }
 }

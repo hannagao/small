@@ -1,6 +1,7 @@
 package com.hng.small.web.controller;
 
 import com.hng.small.biz.user.UserService;
+import com.hng.small.common.core.PageResult;
 import com.hng.small.dal.query.UserQuery;
 import com.hng.small.model.dataobject.User;
 import org.springframework.stereotype.Controller;
@@ -9,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
-import java.util.List;
 
 /**
  * @Author gaohanna
@@ -40,7 +40,7 @@ public class UserController {
      */
     @RequestMapping(value = "/findList", method = RequestMethod.POST)
     @ResponseBody
-    public List<User> pageList(UserQuery userQuery){
+    public PageResult<User> pageList(UserQuery userQuery){
         return userService.findList(userQuery);
     }
 }

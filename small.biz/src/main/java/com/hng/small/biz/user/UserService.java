@@ -1,5 +1,6 @@
 package com.hng.small.biz.user;
 
+import com.hng.small.common.core.PageResult;
 import com.hng.small.dal.query.UserQuery;
 import com.hng.small.model.dataobject.User;
 
@@ -29,6 +30,6 @@ public interface UserService {
      * @param query
      * @return
      */
-    List<User> findList(UserQuery query);
+    PageResult<User> findList(UserQuery query);
 
 }
