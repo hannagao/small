@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE configuration>
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+    <contextName>small</contextName>
+    <property name="LOG_CHARSET" value="UTF-8"/>
+    <property name="LOG_PATH" value="d:/private/data/html/logs/small"/>
+
+    <!-- 控制台输出日志 -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </layout>
+    </appender>
+
+    <!-- dal -->
+    <appender name="dal" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${LOG_PATH}/small-dal.log</File>
+        <Encoding>${LOG_CHARSET}</Encoding>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>
+                ${LOG_PATH}/small-dal-%d{yyyy-MM-dd}.%i.log
+            </FileNamePattern>
+            <!-- keep 30 days worth of history-->
+            <MaxHistory>30</MaxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <!-- rollover daily or whenever the file size reaches 50MB -->
+                <maxFileSize>50MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
+        </layout>
+    </appender>
+
+    <!-- web -->
+    <appender name="web" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${LOG_PATH}/small-web.log</File>
+        <Encoding>${LOG_CHARSET}</Encoding>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>
+                ${LOG_PATH}/small-web-%d{yyyy-MM-dd}.%i.log
+            </FileNamePattern>
+            <!-- keep 30 days worth of history-->
+            <MaxHistory>30</MaxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <!-- rollover daily or whenever the file size reaches 50MB -->
+                <maxFileSize>50MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
+        </layout>
+    </appender>
+
+
+    <!-- error -->
+    <appender name="error" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${LOG_PATH}/small-error.log</File>
+        <Encoding>${LOG_CHARSET}</Encoding>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>
+                ${LOG_PATH}/small-error-%d{yyyy-MM-dd}.%i.log
+            </FileNamePattern>
+            <!-- keep 30 days worth of history-->
+            <MaxHistory>30</MaxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <!-- rollover daily or whenever the file size reaches 50MB -->
+                <maxFileSize>50MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
+        </layout>
+    </appender>
+
+
+    <logger name="com.hng.small.web">
+        <level value="INFO"/>
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="web"/>
+    </logger>
+
+    <!-- commom package -->
+    <logger name="com.hng.small.common">
+        <level value="INFO"/>
+        <appender-ref ref="common"/>
+    </logger>
+
+    <!-- dal package -->
+    <logger name="com.hng.small.dal">
+        <level value="DEBUG"/>
+        <appender-ref ref="dal"/>
+    </logger>
+
+    <!-- biz package -->
+    <logger name="com.hng.small.biz">
+        <level value="INFO"/>
+        <appender-ref ref="biz"/>
+    </logger>
+
+
+    <!-- @RequestBody标签 json映射成对象出错时 有日志打出 -->
+    <logger name="org.springframework.web.servlet.mvc.method" >
+        <level value="debug"/>
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="web"/>
+    </logger>
+
+    <logger name="logback"/>
+
+    <!-- 开启debug模式 即可 打印sql -->
+    <root level="info">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="error"/>
+    </root>
+
+</configuration>
