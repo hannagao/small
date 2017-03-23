@@ -1,0 +1,135 @@
+.tab {
+    margin: 20px 0;
+}
+
+/*物流模板 start */
+.tmplHeadInfo {
+    background-color: #e6e6e6;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.tmplHeadInfo div, .tmplHeadInfo div span, .tmplHeadInfo div span a {
+    margin: 0 20px;
+}
+
+.floatLeft {
+    float: left;
+}
+
+.floatRight {
+    float: right;
+}
+
+.textLeft {
+    text-align: left !important;
+}
+
+.textRight {
+    text-align: right !important;
+}
+
+.textCenter {
+    text-align: center !important;
+}
+
+.tmplContent {
+    height: 40px;
+    line-height: 40px;
+}
+
+.confrimTip {
+    text-align: center;
+    margin: 5px;
+}
+
+.redColor {
+    color: red;
+}
+
+.greenColor {
+    color: green;
+}
+
+.orangeColor {
+    color: #ff6600;
+}
+
+.grayColor {
+    color: #c3cdcd;
+}
+
+.blodFont {
+    font-weight: 600;
+}
+
+.row label {
+    padding: 5px;
+}
+
+.addLogisticsTool {
+    margin-right: 20px;
+}
+
+.inputTips {
+    border: 1px solid #ff9900;
+    border-radius: 2px;
+    margin: 0 20px;
+    padding: 0 10px !important;
+    color: #c3cdcd;
+}
+
+.labelName {
+    width: 110px;
+    text-align: right;
+}
+
+.area, .inline {
+    display: inline-block !important;
+    position: relative !important;
+}
+
+
+.areaLabel {
+    padding: 2px 2px 2px 14px !important;
+    line-height: 22px;
+    font-size: 14px;
+}
+
+.areaLabel input[type='checkbox']{
+    margin: 10px;
+}
+
+#provinceDialog  .modal-dialog {
+    width: 760px;
+}
+
+#cityDialog  .modal-dialog {
+    top: 20px;
+}
+
+.getCityICoin {
+    display: inline-block;
+    width: 15px;
+}
+
+.inputWidth50{
+    width: 50px;
+}
+
+/* 必填项 */
+
+.required:after {
+    content: " * ";
+    color: red;
+    vertical-align: middle;
+}
+/*物流模板 end */
+
+
+/*异常日志*/
+.exceptionLogs{
+    word-break:break-all;
+    white-space:normal;
+    padding: 5px;
+}

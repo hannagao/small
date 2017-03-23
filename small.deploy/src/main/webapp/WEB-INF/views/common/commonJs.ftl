@@ -1,0 +1,10 @@
+<script type="text/javascript" src="${basePath}/resources/js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="${basePath}/resources/js/lib/bootstrap.min.js"></script>
+<script  type="text/javascript" src="${basePath}/resources/js/lib/jquery.bootstrap-growl.min.js"></script>
+<script  type="text/javascript" src="${basePath}/resources/js/lib/vuejs/vue.min.js"></script>
+<script type="text/javascript" src="${basePath}/resources/js/lib/laypage/laypage.js"></script>
+<script type="text/javascript" src="${basePath}/resources/js/lib/layer/layer.js"></script>
+<script type="text/javascript" src="${basePath}/resources/js/lib/laydate/laydate.js"></script>
+<script type="text/javascript" src="${basePath}/resources/js/lib/jquery.tmpl.js"></script>
+<script type="text/javascript" src="${basePath}/resources/js/lib/echarts.js"></script>
+<script type="text/javascript" src="${basePath}/resources/js/global.js"></script>

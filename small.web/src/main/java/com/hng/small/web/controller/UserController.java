@@ -21,6 +21,11 @@ public class UserController {
     @Resource
     private UserService userService;
 
+    @RequestMapping(value = "user/userList", method = RequestMethod.GET)
+    public String userList(){
+        return "user/userList";
+    }
+
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public String index( User user) {
         return "common/index";
@@ -38,7 +43,7 @@ public class UserController {
      * @param userQuery
      * @return
      */
-    @RequestMapping(value = "/findList", method = RequestMethod.POST)
+    @RequestMapping(value = "user/pageList", method = RequestMethod.POST)
     @ResponseBody
     public PageResult<User> pageList(UserQuery userQuery){
         return userService.findList(userQuery);

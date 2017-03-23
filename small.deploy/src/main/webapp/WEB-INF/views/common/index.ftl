@@ -14,9 +14,9 @@
             <div class="allWrap">
                 <div style="text-align: center;">
                     <p class="index">
-                        帅哥靓女，欢迎来到物流中心！
+                        hello，small！
                     </p>
-                    <img alt="" src="../../resources/img/index.jpg" style="padding-bottom: 110px" >
+                    <#--<img alt="" src="../../resources/img/index.jpg" style="padding-bottom: 110px" >-->
                 </div>
             </div>
         </div>

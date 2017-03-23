@@ -7,16 +7,13 @@
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
         http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
         http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-4.1.xsd">
-
     <aop:aspectj-autoproxy/>
+    <mvc:annotation-driven/>
+
+    <mvc:resources location="/resources/" mapping="/resources/**"/>
 
     <!--指明 controller 所在包，并扫描其中的注解-->
     <context:component-scan base-package="com.hng.small.web"/>
-
-    <!-- 静态资源(js、image等)的访问 -->
-    <mvc:default-servlet-handler/>
-
-    <!--<mvc:resources location="/resources/" mapping="/resources/**"/>-->
 
     <!-- 开启注解 -->
     <mvc:annotation-driven/>
@@ -39,4 +36,10 @@
         <property name="suffix" value=".ftl"/>
         <property name="contentType" value="text/html;charset=UTF-8"></property>
     </bean>
+
+    <!-- 拦截器 -->
+    <mvc:interceptors>
+        <bean class="com.hng.small.web.interceptor.ContextPathInterceptor"></bean>
+    </mvc:interceptors>
+
 </beans>

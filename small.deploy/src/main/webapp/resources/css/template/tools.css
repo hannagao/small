@@ -1,0 +1,380 @@
+
+/*物流工具 start*/
+.toolsname .form-control, .remark .form-control {
+    width: 300px !important;
+}
+
+.sortnum {
+    width: 70px;
+}
+
+.modal-body span, input {
+    display: inline-block;
+}
+
+.hwcode input[type=text] {
+    width: 35%;
+}
+.remark {
+    clear: both;
+}
+
+.appoint {
+    display: none;
+}
+.shopWidth{
+    width:244px;
+    margin-left: 4px;
+}
+.shopWidth span {
+  margin-top: 5px;
+}
+#editToolsManage .row span {
+    width: 115px !important;
+}
+
+
+.row .fitShop {
+    float: left;
+    line-height: 30px;
+    height: 30px;
+}
+
+.suitableShop .inputTips{
+    margin-top: 5px;
+}
+.row .checkShop li {
+    float: left;
+    margin-right: 15px;
+}
+
+.editTool>.modal-footer{
+    text-align: center;
+}
+
+.editTool .modal-footer .btn{
+    width: 94px;
+}
+.row .remarkText {
+    display: inline-block !important;
+    float: left;
+    height: 40px;
+    line-height: 40px;
+}
+
+#addModal .modal-dialog, #addModal2 .modal-dialog {
+    width: 900px;
+}
+
+#addModal .row span, #addModal2 .row span {
+    color: #666666;
+    margin-right: 5px;
+    width: 75px !important;
+    text-align: right;
+    display: inline-block;
+}
+
+#addModal .form-control, #addModal2 .form-control {
+    width: 60% !important;
+}
+
+[v-cloak] {
+    display: none;
+}
+
+#shop {
+    display: inline-block;
+}
+/*适用区域 start*/
+#reachableAreasModal .modal-dialog{
+    width: 800px;
+}
+
+#reachableAreasModal .modal-dialog .modal-body{
+    max-height: 650px;
+    height: 500px;
+    overflow: auto;
+}
+.applicabeleScope .provice {
+    font-size: 16px;
+    font-weight: 600;
+}
+.applicabeleScope .provice > li {
+    margin: 20px 10px;
+    border-bottom: 1px dashed #ddd;
+}
+
+.applicabeleScope .city {
+    margin: 20px 0;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.applicabeleScope .city> li {
+    width: 210px;
+    margin: 6px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.applicabeleScope .district {
+    position: absolute;
+    width: 188px;
+    background-color: #aaa;
+    color: #fff;
+    top: 20px;
+    left: 80px;
+    z-index: 9999;
+    display: none;
+    height: auto;
+    margin-left: 30px;
+    border: 1px solid;
+    border-radius: 4px;
+    max-height: 450px;
+    overflow: auto;
+    text-align: left;
+}
+
+.applicabeleScope .district > li {
+    margin: 10px 20px;
+    display: inline-block;
+}
+/*适用区域 end*/
+/*编辑 start*/
+.editTool{
+    /*width: 1200px;*/
+    margin: 0 auto;
+    height: auto;
+}
+.dispatchCarrier{
+    width: 800px;
+}
+#editModal .modal-custom{
+    width: 900px;
+}
+.modal-footer {
+    border-top:none;
+}
+.toolsType {
+    float: left;
+}
+.lastTd{
+    position: relative;
+}
+.tdContentLeft{
+    position: absolute;
+    left: 50%;
+    margin-left: -85px;
+    top: 8px;
+}
+.noArea{
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+.addTool{
+    text-align: right !important;
+}
+
+.marginLeft75{
+    margin-left: 75px !important;
+}
+/*编辑 end*/
+/*物流工具管理 end*/
+/*订单运费 start*/
+.orderRecord {
+    border: 1px solid #e6e6e6;
+    overflow: hidden;
+    height: auto;
+}
+
+.orderRecordHead {
+    height: 35px;
+    line-height: 35px;
+    padding-left: 35px;
+    background-color: #f2f2f2;
+    width: 100%;
+}
+
+.orderRecordList {
+    height: 64px;
+    background-color: #fff;
+}
+
+.orderRecordList ul {
+    padding-left: 30px;
+}
+
+.orderRecordList ul li {
+    float: left;
+    margin-right: 100px;
+    line-height: 64px;
+}
+
+.freightInformation {
+    padding-left: 30px;
+}
+
+.freightInformation p {
+    margin-top: 10px;
+}
+
+/*订单运费记录 end*/
+/*日志请求 start*/
+.logDetail{;
+    white-space:normal !important;
+    word-wrap: break-word;
+}
+/*日志请求 end*/
+/*时效列表页面start*/
+.hourList li {
+    float: left;
+    width:33.33%;
+    padding: 5px;
+}
+.hourList li input{
+    width: 40px;
+    margin: 0 4px;
+}
+.setHour img
+{
+    width: 20px;
+    height: 20px;
+}
+/*时效列表页面end*/
+#progressTempModal .modal-custom{
+    width: 800px;
+}
+#progressTempModal .row span {
+    width: 115px !important;
+}
+/*配送监控平台start*/
+.echart{
+    height: auto;
+}
+#linechart,#linechart2,#linechart3,#linechart4,#linechart5{
+    background-color: #fff !important;
+    margin: 5px;
+    height: 300px;
+}
+.table_box,.purchase-name{
+    margin-top: 10px;
+    margin-right: 10px;
+    width: auto;
+}
+.monitorRange{
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+    margin-right:10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+.monitorRange .form-control{
+    width: 180px;
+}
+.loginsitcMotior ul li span{
+    display: block !important;
+}
+select{
+    height: 30px;
+    /*width:220px !important;*/
+}
+.form-control {
+    display:inline-block;
+    color:#666;
+    background-image: none;
+    border:1px solid #ddd;
+    padding: 4px 12px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.row {
+    margin: 0;
+    margin-top:10px;
+    margin-bottom: 10px !important;
+}
+.loginsitcMotior,.exceptionPackage,.loginsticIndex{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.packageState,.packageNum,.packagePercent{
+    font-size: 16px;
+    color: #888;
+}
+.packageNum{
+    color: #333;
+    font-size: 18px;
+}
+.motior ul{
+    overflow: hidden;
+}
+.motior{
+    height: 550px;
+
+}
+#loginsticData ul li{
+    margin:0 10px  10px 0;
+    height: 90px;
+    text-align: left;
+    padding-left: 10px;
+    background-color: #fff;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+ul li span{
+    display: block;
+}
+.loginstic h4{
+    background-color: #fff;
+    font-size: 17px;
+    padding: 10px;
+    border-radius: 4px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.overtime .packageNum,.exceptionPackage .packageNum{
+    color: red;
+}
+.overtime ul li,.exceptionPackage  ul li {
+    border: 2px solid red !important;
+}
+.forData{
+    width: 100%;
+    background-color: #fff;
+    height: 100px;
+}
+
+/*配送监控平台end*/
+
+/* 包裹中心详情start */
+td.red{
+    color: #eb513b !important;
+}
+td.green{
+    color: #11cd6e !important;
+}
+.show{
+    display: inline-block;
+}
+.none{
+    display: none;}
+
+.orderInfo tr td:nth-child(2n-1){
+    background-color:#f2f2f2!important;
+}
+.orderInfo tr td{
+    border: 2px solid #929292 !important;
+}
+
+#packageDetail  .table_box table th {
+    background-color:#f2f2f2 !important;
+}
+/* 包裹中心详情end */
