@@ -23,7 +23,7 @@ public class UserController {
 
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public String index( User user) {
-        return "index";
+        return "common/index";
     }
 
     @RequestMapping(value ="/toJson",method=RequestMethod.POST)

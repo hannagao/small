@@ -7,13 +7,10 @@
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
         http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
         http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-4.1.xsd">
-    <aop:aspectj-autoproxy/>
-    <mvc:annotation-driven/>
 
     <import resource="local/springbeans-mvc.xml"/>
     <import resource="local/springbeans-datasource.xml"/>
-
-    <context:component-scan base-package="com.hng.small.biz"/>
-    <context:component-scan base-package="com.hng.small.dal"/>
+    <import resource="local/springbeans-biz.xml"/>
+    <import resource="local/springbeans-dal.xml"/>
 
 </beans>
