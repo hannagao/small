@@ -1,6 +1,4 @@
 /**
- * qccr.com Inc.
- * Copyright (c) 2014-2016 All Rights Reserved.
  */
 package com.hng.small.web.util;
 
@@ -8,8 +6,6 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * 
- * @author fanghuaichang
- * @version $Id: HttpRequestHelper.java, v 1.0 2016-10-20 下午3:21:57 fanghuaichang Exp $
  */
 public class HttpRequestHelper {
 	
